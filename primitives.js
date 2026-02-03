@@ -1,5 +1,5 @@
-let str = "string";
-let num = "number";
-let bool = "boolean";
-let undef = "undefined";
+const str = "string";
+const num = "number";
+const bool = "boolean";
+const undef = "undefined";
 
