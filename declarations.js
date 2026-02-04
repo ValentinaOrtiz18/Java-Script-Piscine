@@ -11,7 +11,7 @@ const nested = {
     obj: { 
         str: 'Valentina',
         num: 23,
-        bool: false
+        bool: true
     }
 };
 Object.freeze(nested);
