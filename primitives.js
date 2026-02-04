@@ -1,5 +1,5 @@
-const str = "string";
-const num = "number";
-const bool = "boolean";
-const undef = "undefined";
+const str = "Valentina";
+const num = 23;
+const bool = true;
+const undef = undefined;
 
