@@ -1,7 +1,3 @@
-const person = {
-    age: 10,
-    country: 'colombia'
-};
 
 const clone1 = { ...person };
 const clone2 = { ...person};
