@@ -6,4 +6,5 @@ function concatStr(a,b){
 
 /* test 
 console.log(concatStr("valen", "tina"));
+*/
 
