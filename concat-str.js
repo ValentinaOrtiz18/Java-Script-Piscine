@@ -4,7 +4,7 @@ function concatStr(a,b){
      return a + b;
 }
 
-/* test 
+/* test function 
 console.log(concatStr("valen", "tina"));
 */
 
