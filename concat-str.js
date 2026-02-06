@@ -1,8 +1,9 @@
 function concatStr(a,b){
-    return a+b;
-
+    if (typeof a === 'number') a = String(a);
+     if (typeof b === 'number') b = String(b);
+     return a + b;
 }
 
 /* test 
-console.log(concatStr("valentina", "ortiz"));
-*/
+console.log(concatStr("valen", "tina"));
+
