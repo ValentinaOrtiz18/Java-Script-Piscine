@@ -13,7 +13,7 @@
 function get(key,sourceObject){
     return sourceObject[key];
 
-}
+};
 // Function that takes and key and a value, updates the value for the corresponding property and lastly, returns the value 
  function set(key, value ){
     sourceObject[key] = value;
