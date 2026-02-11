@@ -10,7 +10,7 @@ function words(str){
 // join(separator) as shown below 
 
 function sentence(arr){
-    return arr.join(", ");
+    return arr.join(" ");
 };
 
 
