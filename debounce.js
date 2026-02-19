@@ -1,36 +1,34 @@
-function debounce(func, delay) {
-    let timeoutId;
-    return function(... args) {
-        // clear timeout id 
-        clearTimeout(timeoutId);
-
-        // set new timeout 
-        timeoutId = setTimeout(() => {
-            func(...args);
+function debounce(fn, delay) {
+    let timer = null;
+    return function () {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(context, args);
         }, delay);
-    }
-
+    };
 }
 
-function opDebounce(func, delay, options = {}) {
-  let timeoutId;
-  let lastCallTime = 0;
-  
-  return function(...args) {
-    const now = Date.now();
-    
-    // If leading is true AND this is the first call (or enough time passed)
-    if (options.leading && (now - lastCallTime) >= delay) {
-      func(...args);  // Execute immediately
-      lastCallTime = now;
+function opDebounce(fn, delay, options) {
+    var timer = null,
+        first = true,
+        leading;
+    if (typeof options === 'object') {
+        leading = !!options.leading;
     }
-    
-    clearTimeout(timeoutId);
-    
-    // Still set a timeout for trailing execution
-    timeoutId = setTimeout(() => {
-      func(...args);
-    }, delay);
-  }
+    return function () {
+        let context = this,
+            args = arguments;
+        if (first && leading) {
+            fn.apply(context, args);
+            first = false;
+        }
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            fn.apply(context, args);
+        }, delay);
+    };
 }
-
