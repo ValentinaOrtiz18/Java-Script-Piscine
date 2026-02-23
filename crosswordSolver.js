@@ -1,4 +1,4 @@
-// JS-Piscine Raid01 Crossword Solver
+// JS Piscine Crossword Solver Valentina Ortiz
 function crosswordSolver(crossword, words) {
   // Input Validation: checks if the crossword is not a string, if words is not an array, or if any element in words is not a string.
   if (
@@ -14,14 +14,9 @@ function crosswordSolver(crossword, words) {
     console.log('Error not valid crossword');
     return 'Error not valid crossword';
   }
-
-
-  // hasta aqui
-
-  
   // Parse the crossword into a matrix of numbers
   // This code takes the crossword string and transforms it into a 2D array (puzzleNumbers).
-  // Each cell in the array contains either a number (starting point) or -1 for an empty cell.
+  // Each cell in the array contains either a number (starting point) or "-1" for an empty cell.
   // The code splits the string by lines and then by characters, converting '.' to -1 and other characters to integers.
   const puzzleNumbers = crossword
     .trim()
